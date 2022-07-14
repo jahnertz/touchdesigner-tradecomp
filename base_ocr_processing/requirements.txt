@@ -1,5 +1,2 @@
-yahoo_fin
 pytesseract
-keras_ocr
-tensorflow
 pyautogui[pil]
