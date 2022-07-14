@@ -45,8 +45,7 @@ python3 -m pip install --upgrade -r "{reqs}" --target="{target}"
 formatted_win_txt          = win_txt.format(reqs=req_file, target=install_target)
 formatted_mac_txt          = mac_txt.format(reqs=req_file, target=install_target)
 
-# print(formatted_mac_txt)
-# print(formatted_win_txt)
+print("Generating dependency install scripts...")
 
 try:
     os.makedirs('{}/python'.format(install_script_path))
