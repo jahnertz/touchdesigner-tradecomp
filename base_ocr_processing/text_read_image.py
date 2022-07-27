@@ -6,7 +6,7 @@ tesseract_exe = tdu.expandPath(ipar.ExtPython.Tesseractexe)
 
 pyt.pytesseract.tesseract_cmd = r"%s" % tesseract_exe
 
-ocr_result = pyt.image_to_string(Image.open('ocr_source.png'))
+ocr_result = pyt.image_to_string(Image.open('tmp/ocr_source.png'))
 if re.match(ocr_result, "^\s*$"):
     ocr_result = "ERROR: No readable text found."
 else:
