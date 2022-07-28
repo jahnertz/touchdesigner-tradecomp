@@ -60,3 +60,5 @@ with open(str(mac_file), "w+") as mac_script :
     mac_script.write(formatted_mac_txt)
 
 # os.chmod(str(mac_file), stat.S_IXUSR) # TODO: make mac script executable
+
+print("Run dependency install script in Dep/ before beginning")
