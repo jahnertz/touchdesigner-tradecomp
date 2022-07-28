@@ -10,8 +10,9 @@ ocr_result = pyt.image_to_string(Image.open('tmp/ocr_source.png'))
 if re.match(ocr_result, "^\s*$"):
     ocr_result = "ERROR: No readable text found."
 else:
-    ocr_result = re.sub('\s+', '', ocr_result)
+    ocr_result = re.sub('\n+', '', ocr_result)
 
-equity = "$" + "{:,}".format(float(ocr_result))
-print(equity)
-op('text_ocr_result')[0,0] = equity
+print(ocr_result)
+#equity = "$" + "{:,}".format(float(ocr_result))
+#print(equity)
+op('text_ocr_result')[0,0] = ocr_result
